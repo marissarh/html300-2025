@@ -1,3 +1,6 @@
+/*Source code by Online Tutorials on Youtube
+link: https://www.youtube.com/watch?v=_jOqYe0eFqY&list=PL5e68lK9hEzcZLltZrc3NDlKWS3XygchY */
+
 /*color variables used for project are found in the colors.css file*/
 @import './colors.scss';
 
@@ -22,7 +25,7 @@
     height: 100vh;
     background: $background-color;
     border: $border-color 40px solid;
-    
+
     .container{
       position: relative;
       top: 50px;
@@ -124,6 +127,7 @@
     top: -50px;
     transform: translateX(10%);
     width: 100%;
+
 /*Here each li is delayed and by adding filter: blur the animation is creating a steaming effect */
     li{
       list-style: none;
@@ -153,11 +157,11 @@
       &:nth-child(6){
         animation-delay: .2s;
       }
+      }
     }
   }
 }
-}
-  @keyframes animate{
+@keyframes animate{
 
     0%{
         transform: translateY(0);
@@ -195,5 +199,5 @@
       transform: translateY(-2px);
       opacity: 1;
   }
+
 }
-  
