@@ -4,12 +4,14 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+//Grouping repeated styles to a mixin
 @mixin align{
     align-content: center;
     text-align: center;
     color: $white;
     font-size: 30px;
 }
+//Creating the layout of the website using Grid
 body{
     min-height: 100vh;
     display: grid;
@@ -22,6 +24,7 @@ body{
     "footer footer";
 
 }
+//Adding the mixin to the classes that use the same styles
 .sidebar, .footer,  .main, .header{
     @include align()
 }
@@ -33,6 +36,8 @@ body{
     padding: 20px;
     
 }
+
+//Nesting all nav children elements under the nav parent element
 .nav{
     grid-area: nav;
     background-color: $green;
@@ -49,12 +54,16 @@ body{
     list-style: none;
     font-weight: 300;
     display: inline-block;
-    color: $white;
     padding-left: 30px;
     padding-right: 30px;
+    
+}
+&__item a{
+    text-decoration: none;
+    color: $white;
 }
 }
-
+//Add scss color variables
 .sidebar{
     grid-area: sidebar;
     background-color: $purple;
