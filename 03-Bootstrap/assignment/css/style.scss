@@ -4,14 +4,14 @@
 @import 'settings.responsive';
 @import 'components.content';
 
-@mixin align{
+@mixin align{ 
     align-content: center;
     text-align: center;
     color: $cream;
     font-size: 30px;
 }
 
-body{
+body, .bodyImg{
     min-height: 100vh;
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -23,7 +23,7 @@ body{
     "footer footer" ;
 }
 
-.sidebar, .footer, .main, .header{
+.sidebar, .footer, .main, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor, .mainImg{
     @include align()
 }
 
@@ -35,6 +35,7 @@ body{
     padding: 20px;
     
 }
+
 
 .nav{
     grid-area: nav;
@@ -64,11 +65,133 @@ body{
 .sidebar{
     background-color: $softBrown;
 }
-.main{
+.main, .mainImg, .mainAccor{
     background-color: $softCream;
     
 }
-.footer{
+.footer, .footerAccor, .footerImg{
+    grid-area: footer;
+    background-color: $brown;
+    padding: 15px;
+}
+
+
+
+//gridSystem page
+.headerGrid{
+    //grid-area: header;
+    background-color: $brown;
+    font-weight: 100;
+    margin: 0;
+    padding: 20px;
+}
+
+.navGrid{
+    //grid-area: nav;
+    background-color: $seaGreen;
+    font-size: 25px;
+    margin: 0;
+     
+    &__listGrid{
+       width: 100%;
+       text-align: center;
+    }
+
+    &__itemGrid{
+    list-style: none;
+    font-weight: 300;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+
+    &__itemGrid a{
+    text-decoration: none;
+    color: $cream;
+    } 
+}
+.footerGrid{
+    //grid-area: footer;
+    background-color: $brown;
+    padding: 15px; 
+}
+
+
+
+//Images page
+
+.headerImg{
+    grid-area: header;
+    background-color: $brown;
+    font-weight: 100;
+    margin: 0;
+    padding: 20px;
+}
+.navImg{
+    grid-area: nav;
+    background-color: $seaGreen;
+    font-size: 25px;
+    margin: 0;
+     
+    &__listImg{
+       width: 100%;
+       text-align: center;
+    }
+
+    &__itemImg{
+    list-style: none;
+    font-weight: 300;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+
+    &__itemImg a{
+    text-decoration: none;
+    color: $cream;
+    }    
+}
+.footerImg{
+    grid-area: footer;
+    background-color: $brown;
+    padding: 15px;   
+}
+
+
+//Accordion Page
+.headerAccor{
+    grid-area: header;
+    background-color: $brown;
+    font-weight: 100;
+    margin: 0;
+    padding: 20px; 
+}
+.navAccor{
+    grid-area: nav;
+    background-color: $seaGreen;
+    font-size: 25px;
+    margin: 0;
+     
+    &__listAccor{
+       width: 100%;
+       text-align: center;
+    }
+
+    &__itemAccor{
+    list-style: none;
+    font-weight: 300;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+
+    &__itemAccor a{
+    text-decoration: none;
+    color: $cream;
+    }        
+}
+
+.footerAccor{
     grid-area: footer;
     background-color: $brown;
     padding: 15px;
