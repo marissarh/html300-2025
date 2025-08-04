@@ -16,36 +16,43 @@
     <body class="bodyImg">
         <h1 class="headerImg">Responsive Bootstrap Website</h1>
         <nav class=" navImg">
-            <ul class="nav__listImg">
-                <li class="nav__itemImg"><a href="../index.html">Landing</a></li>
-                <li class="nav__itemImg"><a href="./images.html">Images</a></li>
-                <li class="nav__itemImg"><a href="./accordion.html">Accordion</a></li>
-                <li class="nav__itemImg"><a href="./gridSystem.html">Grid System</a></li>
+            <ul class="navImg__listImg">
+                <li class="navImg__itemImg"><a href="../index.html" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
+                <li class="navImg__itemImg"><a href="./images.html" >Images</a></li>
+                <li class="navImg__itemImg"><a href="./accordion.html">Accordion</a></li>
+                <li class="navImg__itemImg"><a href="./gridSystem.html">Grid System</a></li>
             </ul>
         </nav>
         <aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
 
         <main class="container mainImg">
             <div class="row">
-                <div class="col-sm-3 col-xs-2">
-                    <img src="../images/oceanRocks.jpg" alt="view of ocean and rock structured arches" class="img-responsive" width="500" height="500">
+                <div class="col-sm-6 col-xs-3 p-2 rounded mx-auto d-block">
+                    <img src="../images/oceanRocks.jpg" alt="view of ocean and rock structured arches" class="img-fluid">
                 </div>
             </div>
-            <div class="col-sm-3 col-xs-2">
-                <img src="../images/beachWalkway.jpg" alt="view of wooden bridge/walkway on the sand" class="img-responsive" width="500" height="500">
+            <div class="col-sm-6 col-xs-3 p-2 rounded mx-auto d-block">
+                <img src="../images/beachWalkway.jpg" alt="view of wooden bridge/walkway on the sand" class="img-fluid">
             </div>
         </div>
-        <div class="col-sm-3 col-xs-2">
+        <div class="col-sm-6 col-xs-3 p-2 rounded mx-auto d-block">
             <img src="../images/lifeguardChair.jpg" alt="lifeguard station on the beach" class="img-responsive" width="500" height="500">
         </div>
     </div>
             <!--"main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</div>
         --></main>
-        <footer class="footerImg">Footer: This website was created by Marissa H</footer>
-        <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+        <footer class="footerImg mb-5 pb-4">
+            Footer: This website was created by Marissa H</footer>
+            <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+          ></script>
+    <script>
+       const tooltips = document.querySelectorAll('.tt')
+       tooltips.forEach(t => {
+        new bootstrap.Tooltip(t)
+       })
+       </script>
     </body>
 </html>
