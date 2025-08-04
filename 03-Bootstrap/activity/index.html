@@ -5,9 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Activity 06 - Bootstrap</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>    <title>Activity 06 - Bootstrap</title>
   </head>
   <body>
-    <main class="main"></main>
+    <!--Add Bootstrap to your page (Bootstrap CSS as well, feel free to add gulp/sass if desired)
+On the HTML page, create a Bootstrap form
+In the form, create two buttons
+One says "unlock form"
+The other says "submit"
+The submit button should be disabled (the form should not submit when it is clicked).
+On hover over the submit button, a tooltip should appear letting the user know to click the other button.
+Once the user clicks on the unlock button, the submit button should no longer be disabled. It should be clickable (the form will submit), and a tooltip should not show when you hover over it.-->
+    
+
+<main class="main"></main>
+    <form>
+      <div class="form-group p-5">
+        <label for="info">Add info</label>
+        <input type="text" id="info">
+          <button type="button"class="btn btn-secondary" id="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click other button" >Submit</button>
+        <button type="button" class="btn btn-primary">Unlock Form</button>
+    </div>
+    </form>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+   <script>
+    let options={
+      animation: true,
+    };
+    let element = document.getElementById( "Submit" );
+    let tooltip = new bootstrap.Tooltip( element, options );
+   </script>
   </body>
 </html>
