@@ -11,7 +11,7 @@
     font-size: 30px;
 }
 
-body, .bodyImg{
+.bodyIndex, .bodyImg, .bodyAccor{
     min-height: 100vh;
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -23,7 +23,7 @@ body, .bodyImg{
     "footer footer" ;
 }
 
-.sidebar, .footer, .main, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor, .mainImg{
+.sidebar, .footerIndex, .main, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
     @include align()
 }
 
@@ -69,16 +69,21 @@ body, .bodyImg{
     background-color: $softCream;
     
 }
-.footer, .footerAccor, .footerImg{
+.footerIndex, .footerAccor, .footerImg{
     grid-area: footer;
     background-color: $brown;
     padding: 15px;
 }
 
 
+//gridSystem
+.gridHeading{
+    padding: 10px;
+    
+}
 
 //gridSystem page
-.headerGrid{
+/*.headerGrid{
     //grid-area: header;
     background-color: $brown;
     font-weight: 100;
@@ -116,7 +121,7 @@ body, .bodyImg{
     padding: 15px; 
 }
 
-
+*/
 
 //Images page
 
@@ -136,6 +141,7 @@ body, .bodyImg{
     &__listImg{
        width: 100%;
        text-align: center;
+       text-decoration: none;
     }
 
     &__itemImg{
@@ -144,6 +150,7 @@ body, .bodyImg{
     display: inline-block;
     padding-left: 30px;
     padding-right: 30px;
+    
     }
 
     &__itemImg a{
