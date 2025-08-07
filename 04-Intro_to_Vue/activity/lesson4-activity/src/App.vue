@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <form>
+      <div class="form-group p-5">
+        <label for="info">Add info</label>
+        <input type="text" id="info">
+          <button type="button"class="btn btn-secondary" id="submit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Click other button" >Submit</button>
+        <button type="button" class="btn btn-primary">Unlock Form</button>
+    </div>
+    </form>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+ let options={
+      animation: true,
+    };
+    let element = document.getElementById( "Submit" );
+    let tooltip = new bootstrap.Tooltip( element, options );
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url(main.scss);
 </style>
