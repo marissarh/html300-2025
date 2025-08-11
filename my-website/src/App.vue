@@ -19,11 +19,11 @@
             </ul>
             <component :is="currentView"/>
         </nav>
-      <!--<aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
+      <aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
         
         <main class="main">
             <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
-        </main>-->
+        </main>
         <footer class="footerIndex">Footer: This website was created by Marissa H</footer></div>
 
   
@@ -89,7 +89,7 @@ const show = ref(true);
     "footer footer" ;
 }
 
-.sidebar, .footerIndex, .main, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
+ .footerIndex, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
     @include align()
 }
 
@@ -109,6 +109,7 @@ const show = ref(true);
     background-color: $seaGreen;
     font-size: 25px;
     margin: 0;
+    list-style: none;
      
     &__list{
        width: 100%;

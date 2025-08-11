@@ -21,12 +21,12 @@ export default {
                 <li class="navImg__itemImg"><a href="./AccordionPage.vue">Accordion</a></li>
                 <li class="navImg__itemImg"><a href="./GridPage.vue">Grid System</a></li>
             </ul>
-        </nav>-->
+        </nav>
       <aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
         
         <main class="main">
             <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
-        </main>
+        </main>-->
         <!--<footer class="footerIndex">Footer: This website was created by Marissa H</footer>-->
       </div>
     
@@ -35,16 +35,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-// Colors
-/*@import '../colors.scss';
+@import '../colors.scss';
 
-
-@mixin align{ 
+/*@mixin align{ 
     align-content: center;
     text-align: center;
     color: $cream;
     font-size: 30px;
 }
+
+.sidebar, .main{
+  @include align()
+}
+// Colors
+
+
 
 .bodyIndex, .bodyImg, .bodyAccor{
     min-height: 100vh;
@@ -108,7 +113,7 @@ export default {
     grid-area: footer;
     background-color: $brown;
     padding: 15px;
-}
+}*/
 
 /*#app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
