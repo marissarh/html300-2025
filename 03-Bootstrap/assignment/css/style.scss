@@ -4,3 +4,203 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+@mixin align{ 
+    align-content: center;
+    text-align: center;
+    color: $cream;
+    font-size: 30px;
+}
+
+.bodyIndex, .bodyImg, .bodyAccor{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto 2fr;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    "footer footer" ;
+}
+
+.sidebar, .footerIndex, .main, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
+    @include align()
+}
+
+.header{
+    grid-area: header;
+    background-color: $brown;
+    font-weight: 100;
+    margin: 0;
+    padding: 20px;
+    
+}
+
+
+.nav{
+    grid-area: nav;
+    background-color: $seaGreen;
+    font-size: 25px;
+    margin: 0;
+     
+    &__list{
+       width: 100%;
+       text-align: center;
+       
+
+    }
+    &__item{
+    list-style: none;
+    font-weight: 300;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+&__item a{
+    text-decoration: none;
+    color: $cream;
+}
+}
+.sidebar{
+    background-color: $softBrown;
+}
+.main, .mainImg, .mainAccor{
+    background-color: $softCream;
+    
+}
+.footerIndex, .footerAccor, .footerImg{
+    grid-area: footer;
+    background-color: $brown;
+    padding: 15px;
+}
+
+
+//gridSystem
+.gridHeading{
+    padding: 10px;
+    
+}
+
+//gridSystem page
+/*.headerGrid{
+    //grid-area: header;
+    background-color: $brown;
+    font-weight: 100;
+    margin: 0;
+    padding: 20px;
+}
+
+.navGrid{
+    //grid-area: nav;
+    background-color: $seaGreen;
+    font-size: 25px;
+    margin: 0;
+     
+    &__listGrid{
+       width: 100%;
+       text-align: center;
+    }
+
+    &__itemGrid{
+    list-style: none;
+    font-weight: 300;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+
+    &__itemGrid a{
+    text-decoration: none;
+    color: $cream;
+    } 
+}
+.footerGrid{
+    //grid-area: footer;
+    background-color: $brown;
+    padding: 15px; 
+}
+
+*/
+
+//Images page
+
+.headerImg{
+    grid-area: header;
+    background-color: $brown;
+    font-weight: 100;
+    margin: 0;
+    padding: 20px;
+}
+.navImg{
+    grid-area: nav;
+    background-color: $seaGreen;
+    font-size: 25px;
+    margin: 0;
+     
+    &__listImg{
+       width: 100%;
+       text-align: center;
+       text-decoration: none;
+    }
+
+    &__itemImg{
+    list-style: none;
+    font-weight: 300;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    }
+
+    &__itemImg a{
+    text-decoration: none;
+    color: $cream;
+    }    
+}
+.footerImg{
+    grid-area: footer;
+    background-color: $brown;
+    margin-bottom: 10px;
+    padding: 15px;   
+}
+
+
+//Accordion Page
+.headerAccor{
+    grid-area: header;
+    background-color: $brown;
+    font-weight: 100;
+    
+    padding: 20px; 
+}
+.navAccor{
+    grid-area: nav;
+    background-color: $seaGreen;
+    font-size: 25px;
+    margin: 0;
+     
+    &__listAccor{
+       width: 100%;
+       text-align: center;
+    }
+
+    &__itemAccor{
+    list-style: none;
+    font-weight: 300;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+
+    &__itemAccor a{
+    text-decoration: none;
+    color: $cream;
+    }        
+}
+
+.footerAccor{
+    grid-area: footer;
+    background-color: $brown;
+    padding: 15px;
+}
