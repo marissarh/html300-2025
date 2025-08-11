@@ -1,36 +1,42 @@
-<template>
-  <!--<div class="hello">-->
-    <div><h1>{{ msg }}</h1>
-     <nav class=" navImg">
-            <ul class="navImg__listImg">
-                <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
-                <li class="navImg__itemImg"><a href="./ImagesPage.vue" >Images</a></li>
-                <li class="navImg__itemImg"><a href="./AccordionPage.vue">Accordion</a></li>
-                <li class="navImg__itemImg"><a href="./GridPage.vue">Grid System</a></li>
-            </ul>
-        </nav>
-      <aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
-        
-        <main class="main">
-            <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
-        </main>
-        <!--<footer class="footerIndex">Footer: This website was created by Marissa H</footer>--></div>
-    
-</template>
 
 <script>
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   }
 }
+
 </script>
+<template>
+  <!--<div class="hello">-->
+    <div><h1>{{ msg }}</h1>
+
+      
+    <!-- <nav class=" navImg">
+            <ul class="navImg__listImg">
+                <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
+                <li class="navImg__itemImg"><a href="./ImagesPage.vue" >Images</a></li>
+                <li class="navImg__itemImg"><a href="./AccordionPage.vue">Accordion</a></li>
+                <li class="navImg__itemImg"><a href="./GridPage.vue">Grid System</a></li>
+            </ul>
+        </nav>-->
+      <aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
+        
+        <main class="main">
+            <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
+        </main>
+        <!--<footer class="footerIndex">Footer: This website was created by Marissa H</footer>-->
+      </div>
+    
+</template>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 // Colors
-@import '../colors.scss';
+/*@import '../colors.scss';
 
 
 @mixin align{ 

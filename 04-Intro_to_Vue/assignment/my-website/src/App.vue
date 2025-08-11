@@ -5,6 +5,11 @@
   </div>-->
   <div class="header">
   <HelloWorld msg="Responsive Website"/>
+  <div>
+      <button @click="show = !show">This is a button</button>
+      <p v-if="show">Hello there</p>
+      <p v-else>Welcome to my page</p>
+    </div>
        <nav class=" navImg">
             <ul class="navImg__listImg">
                 <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
@@ -14,11 +19,11 @@
             </ul>
             <component :is="currentView"/>
         </nav>
-      <aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
+      <!--<aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
         
         <main class="main">
             <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
-        </main>
+        </main>-->
         <footer class="footerIndex">Footer: This website was created by Marissa H</footer></div>
 
   
@@ -55,6 +60,8 @@ const currentView = computed (() => {
 
   }
 }*/
+
+const show = ref(true);
 
 </script>
 
