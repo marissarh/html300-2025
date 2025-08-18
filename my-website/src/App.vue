@@ -1,8 +1,9 @@
 <script setup>
 //import { ref } from "vue";
-import HelloWorld from './components/HelloWorld.vue';
+//import HelloWorld from './components/HelloWorld.vue';
 //import ImagesPage from './components/ImagesPage.vue';
-//import AccordionPage from './components/AccordionPage.vue';
+import AccordionPage from './components/AccordionPage.vue';
+
 //import GridPage from './components/GridPage.vue';
 
 //const text = ref("Hello");
@@ -50,7 +51,7 @@ function changeText(event){
   <div>
   <div>{{ text }}</div>
   <div class="header">
-  <HelloWorld msg="Responsive Website"/>
+  <AccordionPage msg="Responsive Website"/>
   </div>
  </div>
    
@@ -59,89 +60,5 @@ function changeText(event){
 
 
 <style lang="scss">
-// Colors
-/*@import '../src/colors.scss';
 
-
-@mixin align{ 
-    align-content: center;
-    text-align: center;
-    color: $cream;
-    font-size: 30px;
-}
-
-.bodyIndex, .bodyImg, .bodyAccor{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto 2fr;
-    grid-template-areas: 
-    "header header"
-    "nav nav"
-    "main main"
-    "footer footer" ;
-}
-
- .footerIndex, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
-    @include align()
-}
-
-.header{
-    grid-area: header;
-    background-color: $brown;
-    font-weight: 100;
-    margin: 0;
-    padding: 20px;
-
-    
-}
-
-
-.nav{
-    grid-area: nav;
-    background-color: $seaGreen;
-    font-size: 25px;
-    margin: 0;
-    list-style: none;
-     
-    &__list{
-       width: 100%;
-       text-align: center;
-       
-
-    }
-    &__item{
-    list-style: none;
-    font-weight: 300;
-    display: inline-block;
-    padding-left: 30px;
-    padding-right: 30px;
-    
-}
-&__item a{
-    text-decoration: none;
-    color: $cream;
-}
-}
-.sidebar{
-    background-color: $softBrown;
-}
-.main, .mainImg, .mainAccor{
-    background-color: $softCream;
-    
-}
-.footerIndex, .footerAccor, .footerImg{
-    grid-area: footer;
-    background-color: $brown;
-    padding: 15px;
-}*/
-
-/*#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}*/
 </style>
