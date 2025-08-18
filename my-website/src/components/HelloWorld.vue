@@ -1,6 +1,15 @@
 
 <script>
+import bootstrap from 'bootstrap-vue'
+import { Router } from 'express'
 
+ const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t => {
+         new bootstrap.Tooltip(t)
+        })
+
+         
+    
 export default {
   
   name: 'HelloWorld',
@@ -20,7 +29,6 @@ export default {
         
     <div><h1>{{ msg }}</h1>
 
-      
      <nav class=" nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
@@ -41,7 +49,6 @@ export default {
 </template>
 
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import '../styles.scss';
 

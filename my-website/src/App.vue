@@ -1,9 +1,8 @@
 <script setup>
 //import { ref } from "vue";
-//import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from './components/HelloWorld.vue';
 //import ImagesPage from './components/ImagesPage.vue';
-import AccordionPage from './components/AccordionPage.vue';
-
+//import AccordionPage from './components/AccordionPage.vue';
 //import GridPage from './components/GridPage.vue';
 
 //const text = ref("Hello");
@@ -51,7 +50,7 @@ function changeText(event){
   <div>
   <div>{{ text }}</div>
   <div class="header">
-  <AccordionPage msg="Responsive Website"/>
+  <HelloWorld msg="Responsive Website"/>
   </div>
  </div>
    
