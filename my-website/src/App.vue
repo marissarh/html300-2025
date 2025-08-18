@@ -1,18 +1,19 @@
 <script setup>
-import { ref, computed } from "vue";
+//import { ref } from "vue";
 import HelloWorld from './components/HelloWorld.vue';
-import ImagesPage from './components/ImagesPage.vue';
-import AccordionPage from './components/AccordionPage.vue';
-import GridPage from './components/GridPage.vue';
+//import ImagesPage from './components/ImagesPage.vue';
+//import AccordionPage from './components/AccordionPage.vue';
+//import GridPage from './components/GridPage.vue';
 
-const routes = {
+//const text = ref("Hello");
+/*const routes = {
   "/": HelloWorld,
   "/ImagesPage": ImagesPage,
   "/AccordionPage": AccordionPage,
   "/GridPage": GridPage
 }
 
-const currentPath = ref(window.location.hash);
+/*const currentPath = ref(window.location.hash);
 
 window.addEventListener("hashchange", () => {
   currentPath.value = window.location.hash;
@@ -25,7 +26,7 @@ const currentView = computed (() => {
 const text = ref("")
 function changeText(event){
   text.value = event.target.value;
-}
+}*/
 
 /*export default {
   name: 'App',
@@ -35,26 +36,31 @@ function changeText(event){
   }
 }*/
 
-const show = ref(true);
+/*const show = ref(true);*/
+
+
 
 </script>
 
-<template>
+<template >
   <!--<div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>-->
+  <div>
+  <div>{{ text }}</div>
   <div class="header">
   <HelloWorld msg="Responsive Website"/>
   </div>
+ </div>
    
   
-         </template>
+</template>
 
 
 <style lang="scss">
 // Colors
-@import '../src/colors.scss';
+/*@import '../src/colors.scss';
 
 
 @mixin align{ 
@@ -128,7 +134,7 @@ const show = ref(true);
     grid-area: footer;
     background-color: $brown;
     padding: 15px;
-}
+}*/
 
 /*#app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -12,32 +12,30 @@ export default {
 <template>
   <!--<div class="hello">
 
-    <div>
-      <button @click="show = !show">This is a button</button>
-      <p v-if="show">Hello there</p>
-      <p v-else>Welcome to my page</p>
-    </div>
     
+
     <aside class="sidebar">{{ text }}</aside>
         <input v-on:input="changeText"/>-->
+        
     <div><h1>{{ msg }}</h1>
 
       
-     <nav class=" navImg">
-            <ul class="navImg__listImg">
-                <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
-                <li class="navImg__itemImg"><a href="./ImagesPage.vue" >Images</a></li>
-                <li class="navImg__itemImg"><a href="./AccordionPage.vue">Accordion</a></li>
-                <li class="navImg__itemImg"><a href="./GridPage.vue">Grid System</a></li>
+     <nav class=" nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
+                <li class="nav__item"><a href="./ImagesPage.vue" >Images</a></li>
+                <li class="nav__item"><a href="./AccordionPage.vue">Accordion</a></li>
+                <li class="nav__item"><a href="./GridPage.vue">Grid System</a></li>
             </ul>
         </nav>
+        <div class="bodyIndex">
       <aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
         
         <main class="main">
             <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
         </main>
         <footer class="footerIndex">Footer: This website was created by Marissa H</footer>
-      </div>
+      </div></div>
     
 </template>
 
@@ -60,11 +58,11 @@ export default {
 
 
 
-.bodyIndex, .bodyImg, .bodyAccor{
+.bodyIndex{
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto 2fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 3fr;
     grid-template-areas: 
     "header header"
     "nav nav"
@@ -72,7 +70,7 @@ export default {
     "footer footer" ;
 }
 
-.sidebar, .footerIndex, .main, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
+.sidebar, .footer, .main, .header {
     @include align()
 }
 
@@ -80,7 +78,6 @@ export default {
     grid-area: header;
     background-color: $brown;
     font-weight: 100;
-    margin: 0;
     padding: 20px;
     
 }
@@ -114,13 +111,14 @@ export default {
 .sidebar{
     background-color: $softBrown;
 }
-.main, .mainImg, .mainAccor{
+.main{
     background-color: $softCream;
     
 }
-.footerIndex, .footerAccor, .footerImg{
+.footerIndex{
     grid-area: footer;
     background-color: $brown;
-    padding: 15px;
+    padding-top:20px;
+    
 }
 </style>
