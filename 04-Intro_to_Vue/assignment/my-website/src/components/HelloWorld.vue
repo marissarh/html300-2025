@@ -10,11 +10,20 @@ export default {
 
 </script>
 <template>
-  <!--<div class="hello">-->
+  <!--<div class="hello">
+
+    <div>
+      <button @click="show = !show">This is a button</button>
+      <p v-if="show">Hello there</p>
+      <p v-else>Welcome to my page</p>
+    </div>
+    
+    <aside class="sidebar">{{ text }}</aside>
+        <input v-on:input="changeText"/>-->
     <div><h1>{{ msg }}</h1>
 
       
-    <!-- <nav class=" navImg">
+     <nav class=" navImg">
             <ul class="navImg__listImg">
                 <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
                 <li class="navImg__itemImg"><a href="./ImagesPage.vue" >Images</a></li>
@@ -26,8 +35,8 @@ export default {
         
         <main class="main">
             <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
-        </main>-->
-        <!--<footer class="footerIndex">Footer: This website was created by Marissa H</footer>-->
+        </main>
+        <footer class="footerIndex">Footer: This website was created by Marissa H</footer>
       </div>
     
 </template>
@@ -37,7 +46,7 @@ export default {
 <style lang="scss">
 @import '../colors.scss';
 
-/*@mixin align{ 
+@mixin align{ 
     align-content: center;
     text-align: center;
     color: $cream;
@@ -113,14 +122,5 @@ export default {
     grid-area: footer;
     background-color: $brown;
     padding: 15px;
-}*/
-
-/*#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}*/
+}
 </style>

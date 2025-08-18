@@ -1,35 +1,3 @@
-<template>
-  <!--<div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>-->
-  <div class="header">
-  <HelloWorld msg="Responsive Website"/>
-  <div>
-      <button @click="show = !show">This is a button</button>
-      <p v-if="show">Hello there</p>
-      <p v-else>Welcome to my page</p>
-    </div>
-       <nav class=" navImg">
-            <ul class="navImg__listImg">
-                <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
-                <li class="navImg__itemImg"><a href="./ImagesPage.vue" >Images</a></li>
-                <li class="navImg__itemImg"><a href="./AccordionPage.vue">Accordion</a></li>
-                <li class="navImg__itemImg"><a href="./GridPage.vue">Grid System</a></li>
-            </ul>
-            <component :is="currentView"/>
-        </nav>
-      <aside class="sidebar">{{ text }}</aside>
-        <input v-on:input="changeText"/>
-        <main class="main">
-            <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
-        </main>
-        <footer class="footerIndex">Footer: This website was created by Marissa H</footer></div>
-
-  
-  
-         </template>
-
 <script setup>
 import { ref, computed } from "vue";
 import HelloWorld from './components/HelloWorld.vue';
@@ -70,6 +38,19 @@ function changeText(event){
 const show = ref(true);
 
 </script>
+
+<template>
+  <!--<div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  </div>-->
+  <div class="header">
+  <HelloWorld msg="Responsive Website"/>
+  </div>
+   
+  
+         </template>
+
 
 <style lang="scss">
 // Colors
