@@ -1,35 +1,3 @@
-<template>
-  <!--<div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>-->
-  <div class="header">
-  <HelloWorld msg="Responsive Website"/>
-  <div>
-      <button @click="show = !show">This is a button</button>
-      <p v-if="show">Hello there</p>
-      <p v-else>Welcome to my page</p>
-    </div>
-       <nav class=" navImg">
-            <ul class="navImg__listImg">
-                <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
-                <li class="navImg__itemImg"><a href="./ImagesPage.vue" >Images</a></li>
-                <li class="navImg__itemImg"><a href="./AccordionPage.vue">Accordion</a></li>
-                <li class="navImg__itemImg"><a href="./GridPage.vue">Grid System</a></li>
-            </ul>
-            <component :is="currentView"/>
-        </nav>
-      <!--<aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
-        
-        <main class="main">
-            <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
-        </main>-->
-        <footer class="footerIndex">Footer: This website was created by Marissa H</footer></div>
-
-  
-  
-         </template>
-
 <script setup>
 import { ref, computed } from "vue";
 import HelloWorld from './components/HelloWorld.vue';
@@ -53,6 +21,12 @@ window.addEventListener("hashchange", () => {
 const currentView = computed (() => {
   return routes[currentPath.value.slice(1) || "/"] || HelloWorld;
 });
+
+const text = ref("")
+function changeText(event){
+  text.value = event.target.value;
+}
+
 /*export default {
   name: 'App',
   components: {
@@ -64,6 +38,19 @@ const currentView = computed (() => {
 const show = ref(true);
 
 </script>
+
+<template>
+  <!--<div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  </div>-->
+  <div class="header">
+  <HelloWorld msg="Responsive Website"/>
+  </div>
+   
+  
+         </template>
+
 
 <style lang="scss">
 // Colors
@@ -89,7 +76,7 @@ const show = ref(true);
     "footer footer" ;
 }
 
-.sidebar, .footerIndex, .main, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
+ .footerIndex, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
     @include align()
 }
 
@@ -109,6 +96,7 @@ const show = ref(true);
     background-color: $seaGreen;
     font-size: 25px;
     margin: 0;
+    list-style: none;
      
     &__list{
        width: 100%;

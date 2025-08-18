@@ -10,24 +10,33 @@ export default {
 
 </script>
 <template>
-  <!--<div class="hello">-->
+  <!--<div class="hello">
+
+    <div>
+      <button @click="show = !show">This is a button</button>
+      <p v-if="show">Hello there</p>
+      <p v-else>Welcome to my page</p>
+    </div>
+    
+    <aside class="sidebar">{{ text }}</aside>
+        <input v-on:input="changeText"/>-->
     <div><h1>{{ msg }}</h1>
 
       
-    <!-- <nav class=" navImg">
+     <nav class=" navImg">
             <ul class="navImg__listImg">
                 <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
                 <li class="navImg__itemImg"><a href="./ImagesPage.vue" >Images</a></li>
                 <li class="navImg__itemImg"><a href="./AccordionPage.vue">Accordion</a></li>
                 <li class="navImg__itemImg"><a href="./GridPage.vue">Grid System</a></li>
             </ul>
-        </nav>-->
+        </nav>
       <aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
         
         <main class="main">
             <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
         </main>
-        <!--<footer class="footerIndex">Footer: This website was created by Marissa H</footer>-->
+        <footer class="footerIndex">Footer: This website was created by Marissa H</footer>
       </div>
     
 </template>
@@ -35,9 +44,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-// Colors
-/*@import '../colors.scss';
-
+@import '../colors.scss';
 
 @mixin align{ 
     align-content: center;
@@ -45,6 +52,13 @@ export default {
     color: $cream;
     font-size: 30px;
 }
+
+.sidebar, .main{
+  @include align()
+}
+// Colors
+
+
 
 .bodyIndex, .bodyImg, .bodyAccor{
     min-height: 100vh;
@@ -109,13 +123,4 @@ export default {
     background-color: $brown;
     padding: 15px;
 }
-
-/*#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}*/
 </style>
