@@ -1,15 +1,15 @@
 
 <script>
+//import ImagesPage from './ImagesPage.vue'
 import bootstrap from 'bootstrap-vue'
-import { Router } from 'express'
 
  const tooltips = document.querySelectorAll('.tt')
         tooltips.forEach(t => {
          new bootstrap.Tooltip(t)
         })
 
-         
-    
+
+
 export default {
   
   name: 'HelloWorld',
@@ -20,6 +20,7 @@ export default {
 
 </script>
 <template>
+  
   <!--<div class="hello">
 
     
@@ -31,10 +32,10 @@ export default {
 
      <nav class=" nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
-                <li class="nav__item"><a href="./ImagesPage.vue" >Images</a></li>
-                <li class="nav__item"><a href="./AccordionPage.vue">Accordion</a></li>
-                <li class="nav__item"><a href="./GridPage.vue">Grid System</a></li>
+                <router-link to="./HelloWorld.vue" class="tt nav__item" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</router-link>
+                <router-link to="./ImagesPage.vue" class="nav__item">Images</router-link>
+                <router-link to="./AccordionPage.vue" class="nav__item">Accordion</router-link>
+                <router-link to="./GridPage.vue" class="nav__item">Grid System</router-link>
             </ul>
         </nav>
         <div class="bodyIndex">

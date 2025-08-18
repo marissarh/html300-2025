@@ -16,7 +16,9 @@ Vue.use(IconsPlugin)
 
       //import HelloWorld from './components/HelloWorld.vue';
 export default{
-    components:{HelloWorld},
+    components:{
+        HelloWorld },
+
 }
 </script>
 <template>
