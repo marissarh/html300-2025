@@ -19,8 +19,8 @@
             </ul>
             <component :is="currentView"/>
         </nav>
-      <aside class="sidebar">Sidebar: Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, excepturi animi. Tempora quam laudantium amet distinctio illo, dignissimos recusandae sit?</aside>
-        
+      <aside class="sidebar">{{ text }}</aside>
+        <input v-on:input="changeText"/>
         <main class="main">
             <p class="main-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe neque debitis facilis non quos, ducimus distinctio pariatur, fuga sit nam id placeat repellendus quod! Nihil dolorem sit inventore qui.</p>
         </main>
@@ -53,6 +53,12 @@ window.addEventListener("hashchange", () => {
 const currentView = computed (() => {
   return routes[currentPath.value.slice(1) || "/"] || HelloWorld;
 });
+
+const text = ref("")
+function changeText(event){
+  text.value = event.target.value;
+}
+
 /*export default {
   name: 'App',
   components: {
