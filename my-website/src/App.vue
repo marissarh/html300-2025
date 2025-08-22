@@ -1,9 +1,12 @@
-<script setup>
+<script>
 
 import HelloWorld from './components/HelloWorld.vue';
 
-
-
+export default {
+  name: 'App',
+  components: {HelloWorld},
+  
+  }
 
 
 
@@ -12,9 +15,12 @@ import HelloWorld from './components/HelloWorld.vue';
 <template >
   
   <div>
-  <div>{{ text }}</div>
+
+  <div id="app">
   <div class="header">
-  <HelloWorld msg="Responsive Website"/>
+  <HelloWorld msg="Responsive Website"/></div>
+<router-view />
+    
   </div>
  </div>
    
