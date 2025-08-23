@@ -12,7 +12,7 @@ export default {
 
 </script>
 <template>
-  
+  <!--add input box-->
   <!--<div class="hello">
 
     
@@ -21,7 +21,7 @@ export default {
         <input v-on:input="changeText"/>-->
         
     <div><h1>{{ msg }}</h1>
-
+<!--navBar-->
      <nav class=" nav">
             <ul class="nav__list">
                 <router-link to="/" class="nav__item" v-b-tooltip.hover.left title="Click to go to Landing page">Landing</router-link>
