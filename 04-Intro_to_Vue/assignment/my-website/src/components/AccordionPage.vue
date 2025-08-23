@@ -1,98 +1,64 @@
-<template>
-     <div>
-        <h1>{{ msg }}</h1>
-     <!--<nav class=" navImg">
-            <ul class="navImg__listImg">
-                <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
-                <li class="navImg__itemImg"><a href="./ImagesPage.vue" >Images</a></li>
-                <li class="navImg__itemImg"><a href="./AccordionPage.vue">Accordion</a></li>
-                <li class="navImg__itemImg"><a href="./GridPage.vue">Grid System</a></li>
-            </ul>
-        </nav>--></div>
-</template>
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+import HelloWorld from './HelloWorld.vue';
+
+export default{
+    components:{HelloWorld}
 }
 </script>
+<template>
+     <div>
+        
+        <HelloWorld>
+      
+            <slot>
+                 <main class="main">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Item 1
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.
+                     </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Item 2
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Item 3
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.
+
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </main>
+            </slot>
+        </HelloWorld>
+     </div>
+</template>
+
 <style lang="scss">
 // Colors
-@import '../colors.scss';
-
-
-@mixin align{ 
-    align-content: center;
-    text-align: center;
-    color: $cream;
-    font-size: 30px;
-}
-
-.bodyIndex, .bodyImg, .bodyAccor{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto 2fr;
-    grid-template-areas: 
-    "header header"
-    "nav nav"
-    "main main"
-    "footer footer" ;
-}
-
-.sidebar, .footerIndex, .main, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
-    @include align()
-}
-
-.header{
-    grid-area: header;
-    background-color: $brown;
-    font-weight: 100;
-    margin: 0;
-    padding: 20px;
-    
-}
-
-
-.nav{
-    grid-area: nav;
-    background-color: $seaGreen;
-    font-size: 25px;
-    margin: 0;
-     
-    &__list{
-       width: 100%;
-       text-align: center;
-       
-
-    }
-    &__item{
-    list-style: none;
-    font-weight: 300;
-    display: inline-block;
-    padding-left: 30px;
-    padding-right: 30px;
-    
-}
-&__item a{
-    text-decoration: none;
-    color: $cream;
-}
-}
-.sidebar{
-    background-color: $softBrown;
-}
-.main, .mainImg, .mainAccor{
-    background-color: $softCream;
-    
-}
-.footerIndex, .footerAccor, .footerImg{
-    grid-area: footer;
-    background-color: $brown;
-    padding: 15px;
-}
+@import '../styles.scss';
 
 
 </style>
