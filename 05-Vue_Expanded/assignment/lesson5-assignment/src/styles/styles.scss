@@ -1,0 +1,16 @@
+@import './colors.scss';
+
+.buttonContent{
+    background-color: $lightBlue;
+    color: $brown;
+    font-weight: 500;
+}
+.mainContent {
+    background-color: $softCream;
+}
+.asideContent{
+    background-color: $softBrown;
+}
+.headerContent, .footerContent{
+    background-color: $cream;
+}

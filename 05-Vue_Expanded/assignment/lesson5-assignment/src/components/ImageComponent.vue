@@ -1,17 +1,21 @@
 <template>
-    <div class="image-wrapper">
+    <div></div>
+    <!--Add custom class in styles and add Bootstrap. Add dynamic binding; use props.-->
+    <div class="image-wrapper mb-3">
         <img 
         :src="src" 
         :alt="alt"
         :title="title"
         @click="toggleBorder"
-        class="[hasBorder ? 'border border-secondary' : '']"/>
+        :class="{bordered: hasBorder}"
+        class= "responsive-img"/>
     </div>
 </template>
 <script>
+//import reusable code
 import ImageMixin from './ImageMixin';
 
-
+//define props (src, alt, title)
 export default {
     name: 'ImageComponent',
     mixins: [ImageMixin],
@@ -30,14 +34,17 @@ export default {
     }
 }
 </script>
-<style lang="scss">
-.image-wrapper {
-    text-align: center;
-    margin-bottom: 1rem;
+<style  lang="scss">
+@import '@/styles/styles.scss';
 
-img{
-    max-width: 50%;
+
+.image-wrapper img{
+    max-width: 100%;
     height: auto;
-    
-}}
+    transition: border 0.3s ease;
+    cursor: pointer;
+}
+.bordered {
+    border: 10px solid $seaGreen;
+}
 </style>
