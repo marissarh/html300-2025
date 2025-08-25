@@ -1,8 +1,7 @@
 <template>
-  <header class="mb-4 text-center">
-    <slot>
-
-    </slot>
+  <!--Add Header to Pages by using <slot>-->
+  <header class="p-2 text-center headerContent">
+    <slot />
   </header>
 </template>
 
