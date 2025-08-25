@@ -1,9 +1,7 @@
 <template>
   <div>
     <HeaderPage>
-      <template>
         <h1 class="text-primary">Welcome to the Images Page</h1>
-      </template>
     </HeaderPage>
     <ImagesPage />
   </div>
@@ -20,6 +18,9 @@ export default {
 }
 </script>
 
-<style>
+<style> 
 
+h1{
+  margin-top: 20px;
+}
 </style>

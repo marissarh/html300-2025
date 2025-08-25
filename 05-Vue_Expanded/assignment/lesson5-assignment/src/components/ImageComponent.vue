@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div class="image-wrapper">
         <img 
         :src="src" 
         :alt="alt"
         :title="title"
         @click="toggleBorder"
-        class="['img-fluid', hasBorder ? 'border border-secondary' : '']"/>
+        class="[hasBorder ? 'border border-secondary' : '']"/>
     </div>
 </template>
 <script>
@@ -30,4 +30,14 @@ export default {
     }
 }
 </script>
-<style></style>
+<style lang="scss">
+.image-wrapper {
+    text-align: center;
+    margin-bottom: 1rem;
+
+img{
+    max-width: 50%;
+    height: auto;
+    
+}}
+</style>

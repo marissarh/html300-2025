@@ -4,15 +4,18 @@
         <ImageComponent 
         :src="BeachPath"
         alt="image of beach pathway"
-        title="Click to toggle border"/>
+        title="Click to toggle border"
+        />
         <ImageComponent 
         :src="LifeguardStation"
         alt="image of lifeguard station on the beach"
-        title="Click to toggle border"/>
+        title="Click to toggle border"
+        />
         <ImageComponent 
         :src="OceanRocks"
         alt="image of huges arches made of rock in the ocean"
-        title="Click to toggle border"/>
+        title="Click to toggle border"
+        />
     </div>
     </div>
 </template>
