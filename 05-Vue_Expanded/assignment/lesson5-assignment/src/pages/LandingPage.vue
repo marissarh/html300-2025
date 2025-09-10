@@ -4,14 +4,9 @@
          <HeaderPage>
         <h1 class="text-primary">Responsive Website</h1>
     </HeaderPage>
-    <div class="buttonContent p-2">
-        <div class=" d-flex justify-content-center ">
-        <router-link to="images" class="btn btn-secondary p-3 m-2">Images</router-link>
-        <router-link to="accordion" class="btn btn-secondary p-3 m-2">AccordionPage</router-link>
+   
 
-    </div>
-</div>
-        <div class="mainContent p-4">
+        <div class="mainContent">
         <div class="container">
             <div class="row">
                 <!--Create aside content for Landing Page-->
@@ -36,7 +31,7 @@
             </div></div>
         </div>
         
-    </div>
+   </div>
 </template>
 <script>
 import HeaderPage from '@/components/HeaderPage.vue';
