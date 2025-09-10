@@ -1,7 +1,7 @@
 <template>
     <!--Include Header & Image Component to page-->
      <HeaderPage>
-        <h1 class="text-primary">Responsive Website</h1>
+        <h1 class="text-primary">View Images</h1>
     </HeaderPage>
     <div class=" d-flex justify-content-center p-2 buttonContent">
         <!--Create button to return to landing page-->
