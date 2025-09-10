@@ -2,11 +2,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from '@/pages/LandingPage.vue'
 import ImagesPage from '@/pages/ImagesPage.vue'
 import AccordionPage from '@/pages/AccordionPage.vue'
+import GridPage from '@/pages/GridPage.vue'
 
 
 const routes = [
     {
-        path: '/',
+        path: '/landing',
         name: 'Home',
         component: LandingPage
     },
@@ -19,6 +20,11 @@ const routes = [
         path: '/accordion',
         name: 'Accordion',
         component: AccordionPage
+    },
+    {
+        path: '/grid',
+        name: 'Grid',
+        component: GridPage
     },
 
 
