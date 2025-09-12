@@ -1,147 +1,38 @@
-<script setup>
-//import { ref } from "vue";
-import HelloWorld from './components/HelloWorld.vue';
-//import ImagesPage from './components/ImagesPage.vue';
-//import AccordionPage from './components/AccordionPage.vue';
-//import GridPage from './components/GridPage.vue';
+<script >
+import NavigationBar from "./components/NavigationBar.vue";
+import FooterCo from "./components/FooterCo.vue";
+import HeaderCo from "./components/HeaderCo.vue";
 
-//const text = ref("Hello");
-/*const routes = {
-  "/": HelloWorld,
-  "/ImagesPage": ImagesPage,
-  "/AccordionPage": AccordionPage,
-  "/GridPage": GridPage
-}
 
-/*const currentPath = ref(window.location.hash);
-
-window.addEventListener("hashchange", () => {
-  currentPath.value = window.location.hash;
-});
-
-const currentView = computed (() => {
-  return routes[currentPath.value.slice(1) || "/"] || HelloWorld;
-});
-
-const text = ref("")
-function changeText(event){
-  text.value = event.target.value;
-}*/
-
-/*export default {
+export default {
   name: 'App',
-  components: {
-    HelloWorld,
-
-  }
-}*/
-
-/*const show = ref(true);*/
+  components:{
+  
+    NavigationBar,
+    FooterCo,
+    HeaderCo
+  }}
 
 
 
 </script>
 
-<template >
-  <!--<div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>-->
-  <div>
-  <div>{{ text }}</div>
-  <div class="header">
-  <HelloWorld msg="Responsive Website"/>
-  </div>
- </div>
+<template>
+  <div class="d-flex flex-column min-vh-100">
+  <HeaderCo />
+  <NavigationBar />
+ 
+  <main class="main">
+    <router-view />
+  </main>
    
+    <FooterCo class="mt-auto"/>
+  </div>
+  
   
 </template>
 
 
 <style lang="scss">
-// Colors
-/*@import '../src/colors.scss';
-
-
-@mixin align{ 
-    align-content: center;
-    text-align: center;
-    color: $cream;
-    font-size: 30px;
-}
-
-.bodyIndex, .bodyImg, .bodyAccor{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto 2fr;
-    grid-template-areas: 
-    "header header"
-    "nav nav"
-    "main main"
-    "footer footer" ;
-}
-
- .footerIndex, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
-    @include align()
-}
-
-.header{
-    grid-area: header;
-    background-color: $brown;
-    font-weight: 100;
-    margin: 0;
-    padding: 20px;
-
-    
-}
-
-
-.nav{
-    grid-area: nav;
-    background-color: $seaGreen;
-    font-size: 25px;
-    margin: 0;
-    list-style: none;
-     
-    &__list{
-       width: 100%;
-       text-align: center;
-       
-
-    }
-    &__item{
-    list-style: none;
-    font-weight: 300;
-    display: inline-block;
-    padding-left: 30px;
-    padding-right: 30px;
-    
-}
-&__item a{
-    text-decoration: none;
-    color: $cream;
-}
-}
-.sidebar{
-    background-color: $softBrown;
-}
-.main, .mainImg, .mainAccor{
-    background-color: $softCream;
-    
-}
-.footerIndex, .footerAccor, .footerImg{
-    grid-area: footer;
-    background-color: $brown;
-    padding: 15px;
-}*/
-
-/*#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}*/
+@import '@/assets/styles/styles.scss';
 </style>

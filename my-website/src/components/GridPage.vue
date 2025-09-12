@@ -1,16 +1,46 @@
 <template>
      <div>
-        <h1>{{ msg }}</h1>
-     <!--<nav class=" navImg">
-            <ul class="navImg__listImg">
-                <li class="navImg__itemImg"><a href="./HelloWorld.vue" class="tt" data-bs-toggle="tooltip" data-bs-placement="left" title="Click to go to Landing page">Landing</a></li>
-                <li class="navImg__itemImg"><a href="./ImagesPage.vue" >Images</a></li>
-                <li class="navImg__itemImg"><a href="./AccordionPage.vue">Accordion</a></li>
-                <li class="navImg__itemImg"><a href="./GridPage.vue">Grid System</a></li>
-            </ul>
-        </nav>--></div>
+    <!--Use Bootstrap to determine coloumn/row, padding, and background-color-->
+    <div class="container-md">
+     <div class="row">
+            
+                <p class="col p-5 mt-3 bg-light"  data-bs-toggle="tooltip" 
+                data-bs-title="Tooltip 3" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae laudantium molestias sapiente quia
+                    accusantium explicabo fugit recusandae culpa adipisci modi.</p>
+        </div>
+        <div class="row">
+            
+            <p class="col p-5 bg-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae laudantium molestias sapiente quia
+                accusantium explicabo fugit recusandae culpa adipisci modi.</p>
+    </div>
+    <div class="row">
+            
+        <p class="col p-5 bg-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae laudantium molestias sapiente quia
+            accusantium explicabo fugit recusandae culpa adipisci modi.</p>
+</div>
+<div class="row">
+    <div class="col-12 col-md-8 bg-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, similique?</div>
+    <div class="col-6 col-md-4 bg-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, similique?</div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 col-md-4 bg-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, similique?</div>
+    <div class="col-6 col-md-4 bg-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, similique?</div>
+    <div class="col-6 col-md-4 bg-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, similique?</div>
+  </div>
+  
+ 
+  <div class="row">
+    <div class="col-6 bg-warning m-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, similique?</div>
+    <div class="col-6 bg-warning m-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, similique?</div>
+  </div>
+</div>
+
+</div>
 </template>
 <script>
+
+
 
 
 /*const tooltips = document.querySelectorAll('.tt')
@@ -19,87 +49,15 @@
        })*/
 
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'GridPage',
+  
+  
 }
 </script>
 <style lang="scss">
 // Colors
-@import '../colors.scss';
-
-
-@mixin align{ 
-    align-content: center;
-    text-align: center;
-    color: $cream;
-    font-size: 30px;
-}
-
-.bodyIndex, .bodyImg, .bodyAccor{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto 2fr;
-    grid-template-areas: 
-    "header header"
-    "nav nav"
-    "main main"
-    "footer footer" ;
-}
-
-.sidebar, .footerIndex, .main, .header, .footerAccor, .footerImg, .headerAccor, .headerImg, .mainAccor{
-    @include align()
-}
-
-.header{
-    grid-area: header;
-    background-color: $brown;
-    font-weight: 100;
-    margin: 0;
-    padding: 20px;
-    
-}
-
-
-.nav{
-    grid-area: nav;
-    background-color: $seaGreen;
-    font-size: 25px;
-    margin: 0;
-     
-    &__list{
-       width: 100%;
-       text-align: center;
-       
-
-    }
-    &__item{
-    list-style: none;
-    font-weight: 300;
-    display: inline-block;
-    padding-left: 30px;
-    padding-right: 30px;
-    
-}
-&__item a{
-    text-decoration: none;
-    color: $cream;
-}
-}
-.sidebar{
-    background-color: $softBrown;
-}
-.main, .mainImg, .mainAccor{
-    background-color: $softCream;
-    
-}
-.footerIndex, .footerAccor, .footerImg{
-    grid-area: footer;
-    background-color: $brown;
-    padding: 15px;
-}
+@import '../assets/styles/colors.scss';
+@import '../assets/styles/styles.scss';
 
 
 </style>

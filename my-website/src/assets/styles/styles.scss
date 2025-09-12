@@ -1,0 +1,87 @@
+@import './colors.scss';
+@mixin align{ 
+    align-content: center;
+    text-align: center;
+    color: $cream;
+    font-size: 30px;
+}
+
+.body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto 2fr;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    "footer footer" ;
+}
+
+.sidebar, .footer, .main, .header{
+    @include align()
+}
+
+.header{
+    grid-area: header;
+    background-color: $brown;
+    font-weight:500;
+    margin: 0;
+    padding: 20px;
+   font-size: 50px;
+    
+}
+
+
+.nav{
+    grid-area: nav;
+    background-color: $seaGreen;
+    
+    margin: 0;
+    padding: 10px;
+    
+     
+    &__list{
+       width: 100%;
+       text-align: center;
+       
+
+    }
+    &__item{
+    list-style: none;
+    font-weight: 400;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    
+    
+}
+&__item a{
+    text-decoration: none;
+    color: $cream;
+}
+}
+.sidebar{
+    background-color: $softBrown;
+}
+.main{
+    background-color: $softCream;
+    padding: 30px;
+    
+}
+.footer{
+    grid-area: footer;
+    background-color: $brown;
+    padding: 15px;
+    
+    
+}
+
+
+
+
+
+
+
+
