@@ -1,5 +1,4 @@
 @import './colors.scss';
-
 @mixin align{ 
     align-content: center;
     text-align: center;
@@ -7,18 +6,11 @@
     font-size: 30px;
 }
 
-.sidebar, .main{
-  @include align()
-}
-// Colors
-
-
-
-.bodyIndex{
+.body{
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 3fr;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto 2fr;
     grid-template-areas: 
     "header header"
     "nav nav"
@@ -26,15 +18,17 @@
     "footer footer" ;
 }
 
-.sidebar, .footer, .main, .header {
+.sidebar, .footer, .main, .header{
     @include align()
 }
 
 .header{
     grid-area: header;
     background-color: $brown;
-    font-weight: 100;
+    font-weight:500;
+    margin: 0;
     padding: 20px;
+   font-size: 50px;
     
 }
 
@@ -42,8 +36,10 @@
 .nav{
     grid-area: nav;
     background-color: $seaGreen;
-    font-size: 25px;
+    
     margin: 0;
+    padding: 10px;
+    
      
     &__list{
        width: 100%;
@@ -53,27 +49,39 @@
     }
     &__item{
     list-style: none;
-    font-weight: 300;
+    font-weight: 400;
     display: inline-block;
     padding-left: 30px;
     padding-right: 30px;
-    color: $cream;
-    }
-    &__item a{
+    font-size: 25px;
+    
+    
+}
+&__item a{
     text-decoration: none;
-    color: $softBrown;
-    }
+    color: $cream;
+}
 }
 .sidebar{
     background-color: $softBrown;
 }
 .main{
     background-color: $softCream;
+    padding: 30px;
     
 }
-.footerIndex{
+.footer{
     grid-area: footer;
     background-color: $brown;
-    padding-top:20px;
+    padding: 15px;
+    
     
 }
+
+
+
+
+
+
+
+

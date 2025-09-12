@@ -1,64 +1,71 @@
-<script>
-import HelloWorld from './HelloWorld.vue';
-
-export default{
-    components:{HelloWorld}
-}
-</script>
 <template>
-     <div>
-        
-        <HelloWorld>
-      
-            <slot>
-                 <main class="main">
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Item 1
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.
-                     </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Item 2
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.</div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Item 3
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.
-
-                      </div>
-                  </div>
-                </div>
-              </div>
-        </main>
-            </slot>
-        </HelloWorld>
-     </div>
+     <!--Use Bootstrap to add padding to container and items-->
+       <div class="container p-4">
+        <!-- use a v-for to iterate through an object to fill out the content in an accordion-->
+        <div class="accordion p-3" id="accordionExample" >
+          <div class="accordion-item p-2"
+          v-for="(item, index) in accordionItems" :key="index">
+          <h2 class="accordion-header" :id="'heading' + index">
+          <button class="accordion-button"
+          :class="{collapsed: activeIndex !== index}"
+          type="button" @click="toggle(index)" :aria-expanded="activeIndex === index"
+          :aria-controls="'collapse' + index">
+          {{ item.title }}
+          </button>
+        </h2>
+        <div
+          :id="'collapse' + index" class="accordion-collapse collapse"
+          :class="{ show: activeIndex === index}"
+          :aria-labelledby="'heading' + index"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            {{ item.content }}
+        </div>
+      </div>
+      </div>
+    </div>
+        </div>
 </template>
+<script>
 
+
+export default {
+  name: 'AccordionPage',
+ 
+  data() {
+    return {
+      activeIndex: 0,
+      accordionItems: [
+      {
+        title: 'Item 1',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.'
+      },
+      {
+        title: 'Item 2',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.'
+      },
+      {
+        title: 'Item 3',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.'
+      },
+      {
+        title: 'Item 4',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.'
+      },
+      {
+        title: 'Item 5',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tempora sapiente provident maxime expedita dignissimos laudantium ratione placeat molestias quas.'
+      },
+    ],
+  };
+},
+methods: { toggle(index){
+  this.activeIndex = this.activeIndex === index ? null: index;
+}}
+};
+</script>
 <style lang="scss">
 // Colors
-@import '../styles.scss';
-
-
+@import '../assets/styles/colors.scss';
+@import '../assets/styles/styles.scss';
 </style>
