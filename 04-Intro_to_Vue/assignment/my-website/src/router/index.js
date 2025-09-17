@@ -1,43 +1,30 @@
-
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
-import LandingPage from '../components/LandingPage.vue'
-import ImagesPage from '../components/ImagesPage.vue'
-import AccordionPage from '../components/AccordionPage.vue'
-import GridPage from '../components/GridPage.vue'
-
+import LandingPage from '@/components/LandingPage.vue'
+import ImagesPage from '@/components/ImagesPage.vue'
+import AccordionPage from '@/components/AccordionPage.vue'
+import GridPage from '@/components/GridPage.vue'
 
 
 Vue.use(VueRouter)
-
+//Use of Vue router to navigate component pages
 const routes = [
     {
-        path: "/",
-        name: "landing",
-        component: LandingPage,
+        path: '/landing', component: LandingPage
     },
     {
-        path: "/images",
-        name: "images",
-        component: ImagesPage,
-    }, 
-    {
-        path: "/accordion",
-        name: "accordion",
-        component: AccordionPage,
+        path: '/images', component: ImagesPage
     },
     {
-        path: "/grid",
-        name: "grid",
-        component: GridPage,
+        path: '/accordion', component: AccordionPage
     },
-
+    {
+        path: '/grid', component: GridPage
+    }
 ]
 
-
-export default new VueRouter({
+const router = new VueRouter({
     mode: 'history',
     routes
 })
-
+export default router
